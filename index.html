@@ -1,1 +1,143 @@
-<p><a href="listok.html">З якого дерева листок</a></p>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#315c82">
+  <meta name="description" content="Зручний доступ до навчальних матеріалів і таблиць.">
+  <title>Мої матеріали</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #203449;
+      --muted: #64788b;
+      --blue: #315c82;
+      --blue-dark: #244765;
+      --paper: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 32px 18px;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 15%, rgba(255,255,255,.75), transparent 28%),
+        radial-gradient(circle at 88% 82%, rgba(255,255,255,.65), transparent 30%),
+        linear-gradient(135deg, #e8f1f8, #d9e8f1 48%, #edf3f6);
+    }
+    main {
+      width: min(100%, 760px);
+      padding: clamp(28px, 6vw, 56px);
+      border: 1px solid rgba(255,255,255,.85);
+      border-radius: 28px;
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 24px 70px rgba(38, 70, 98, .13);
+      text-align: center;
+    }
+    .mark {
+      display: inline-grid;
+      place-items: center;
+      width: 68px;
+      height: 68px;
+      margin-bottom: 20px;
+      border-radius: 22px;
+      color: white;
+      font-size: 30px;
+      background: linear-gradient(145deg, #4f83aa, #315c82);
+      box-shadow: 0 10px 24px rgba(49,92,130,.24);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 42px);
+      letter-spacing: -.035em;
+    }
+    .intro {
+      max-width: 490px;
+      margin: 14px auto 34px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      text-align: left;
+    }
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      min-height: 112px;
+      padding: 20px;
+      border: 1px solid #e1eaf0;
+      border-radius: 18px;
+      color: inherit;
+      text-decoration: none;
+      background: var(--paper);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .link-card:hover, .link-card:focus-visible {
+      transform: translateY(-3px);
+      border-color: #a9c4d8;
+      box-shadow: 0 12px 26px rgba(38,70,98,.10);
+      outline: none;
+    }
+    .file-icon {
+      flex: 0 0 48px;
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      color: var(--blue);
+      background: #edf4f9;
+      font-size: 23px;
+    }
+    .link-title { display: block; font-weight: 700; font-size: 17px; }
+    .link-subtitle { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; }
+    footer { margin-top: 32px; color: #8a9aaa; font-size: 12px; }
+    @media (max-width: 560px) {
+      .links { grid-template-columns: 1fr; }
+      .link-card { min-height: 96px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark" aria-hidden="true">✦</div>
+    <h1>Вітаємо!</h1>
+    <p class="intro">
+      Оберіть потрібний матеріал зі списку нижче.
+      Усі сторінки відкриваються безпосередньо з цього репозиторію.
+    </p>
+
+    <nav class="links" aria-label="Навігація за матеріалами">
+      <a class="link-card" href="./listok.html">
+        <span class="file-icon" aria-hidden="true">📄</span>
+        <span>
+          <span class="link-title">Листок</span>
+          <span class="link-subtitle">Відкрити сторінку listok.html</span>
+        </span>
+      </a>
+
+      <a class="link-card" href="./sklad-chysla.html">
+        <span class="file-icon" aria-hidden="true">🔢</span>
+        <span>
+          <span class="link-title">Склад числа</span>
+          <span class="link-subtitle">Відкрити сторінку sklad-chysla.html</span>
+        </span>
+      </a>
+    </nav>
+
+    <footer>Навігаційна сторінка · Українська мова</footer>
+  </main>
+</body>
+</html>
